@@ -2,7 +2,7 @@
 ## Background
 I bought an USB-wifi-adapter "**TP-Link TL-WDN5200H**" for my **ubuntu** server, whose core chip is "**RTL8811CU**" (ID: 0x0bda:0xc811) by The Realtek Corp., but this product only has official driver for **WINDOWS** system.
 
-To make it work on **ubuntu**, I have searched for many relavent guides on the Internet, such as [Driver for rtl8811cu? - Ubuntu Forums](https://ubuntuforums.org/showthread.php?t=2389602) and [TP-LINK TL-WDN5200 usb wifi adapter install on ubuntu?](http://forum.ubuntu.org.cn/viewtopic.php?t=484598). But they didn't solve my problem until I fought that "rtl8821cu driver source code contains some support for rtl8811cu" in [alteman's rtl8821cu repo](https://github.com/alteman/rtl8821cu/blob/master/os_dep/linux/usb_intf.c) as follow.
+To make it work on **ubuntu**, I have searched for many relavent guides on the Internet, such as [Driver for rtl8811cu? - Ubuntu Forums](https://ubuntuforums.org/showthread.php?t=2389602) and [TP-LINK TL-WDN5200 usb wifi adapter install on ubuntu?](http://forum.ubuntu.org.cn/viewtopic.php?t=484598). But they didn't solve my problem until I found that "rtl8821cu driver source code contains some support for rtl8811cu" in [alteman's rtl8821cu repo](https://github.com/alteman/rtl8821cu/blob/master/os_dep/linux/usb_intf.c) as follow.
 
 ```
 #ifdef CONFIG_RTL8821C
